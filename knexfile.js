@@ -1,16 +1,28 @@
 // Update with your config settings.
 
+/**
+ * @type { Object.<string, import("knex").Knex.Config> }
+ */
 module.exports = {
 
   development: {
     client: 'sqlite3',
     connection: {
-      filename: './dev.sqlite3'
-    }
-  },
+      filename: './data/foam.db'
+    },
+    useNullAsDefault: true,
+    migrations: {
+      directory: './data/migrations'
+    },
+    seeds: {
+      directory: "./data/seeds",
+    },
+  }
+  
 
+/*
   staging: {
-    client: 'postgresql',
+    client: 'sqlite3',
     connection: {
       database: 'my_db',
       user:     'username',
@@ -40,5 +52,5 @@ module.exports = {
       tableName: 'knex_migrations'
     }
   }
-
+*/
 };
