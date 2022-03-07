@@ -1,10 +1,10 @@
 
 exports.seed = function(knex, Promise) {
   // Deletes ALL existing entries
-  return knex('table_name').del()
+  return knex('foam').del()
     .then(function () {
       // Inserts seed entries
-      return knex('table_name').insert([
+      return knex('foam').insert([
         {
           "url": "https://take-home-foam-challenge.s3.us-west-2.amazonaws.com/prod-exp13436-2020-01-08-at-04.24.38-9zijoye9dteugy6agooo506u3c6wrin920a99mavvv4z9mahkt7qbu6thl2l3v39.png",
           "lastModified": "2022-02-23T21:31:27.000Z"
